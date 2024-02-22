@@ -21,7 +21,7 @@ assert(~isempty(idxModels), "Must select a model.")
 % 1) Select application profile to simulate
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 applicationProfiles =  dir('Application profiles/*.mat');
-driveCycles = dir('Application profiles\*.csv');
+driveCycles = dir('Application profiles/*.csv');
 applicationProfiles = {applicationProfiles.name, driveCycles.name};
 idx = listdlg('ListString', applicationProfiles,...
     'PromptString', "Pick an application profile.",...
